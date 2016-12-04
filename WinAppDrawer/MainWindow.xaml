@@ -1,12 +1,18 @@
-﻿<Window x:Class="MainWindow"
+﻿<Window x:Name="MainWin" x:Class="MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WinAppDrawer"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+        Title="App Drawer" Height="128" Width="800">
+    <Grid HorizontalAlignment="Right" Margin="0,0,-4,-4" Width="196">
+        <TextBox x:Name="setHeightTBox" HorizontalAlignment="Left" Height="34" Margin="22,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="70"/>
+        <TextBox x:Name="setWidthTBox" HorizontalAlignment="Left" Height="34" Margin="22,49,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="70"/>
+        <Button x:Name="setSizeBut" Content="Button" HorizontalAlignment="Left" Height="72" Margin="108,10,0,0" VerticalAlignment="Top" Width="72" ToolTip="set the size of the App Drawer"/>
+        <Grid x:Name="appDrawerGrid" HorizontalAlignment="Left" Margin="-601,-3,0,5" Width="520">
+            <StackPanel x:Name="appStack" Orientation="Horizontal"/>
+        </Grid>
+        <Button x:Name="addDrawerBut" Content="Button" HorizontalAlignment="Right" Margin="-67,24,215,0" Width="48" Height="48" VerticalAlignment="Top"/>
     </Grid>
 </Window>
